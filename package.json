@@ -1,0 +1,17 @@
+{
+	"name": "csvtotable",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "set \"GENERATE_SOURCEMAP=false\" && wp-scripts build --mode production src/index.js src/frontend.js && uglifyjs build/*.js -c -m --warn  -o  build/*.js",
+		"start": "wp-scripts start src/index.js src/frontend.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@wordpress/scripts": "*",
+		"uglify-js": "*"
+	}
+}
